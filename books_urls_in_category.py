@@ -9,6 +9,37 @@ urlSite = "http://books.toscrape.com"
 base_url_for_categories = "http://books.toscrape.com/catalogue/"
 
 
+def get_category_links(urlSite):
+    """Renvoie la liste des catégories"""
+    reponse = requests.get(urlSite)
+    soup = BeautifulSoup(reponse.text, "lxml")
+    category_links = list()
+    links = soup.find_all(
+        "a"
+    )  # Sortie du champ, soup sur toute la page. #Trouve tous les a  # Création d'un boléen pour categorie
+    index = 0
+    for u in links:
+        # Boucle for qui parcoure les links (soit les "a")
+
+        if (
+            "category" in u["href"]
+        ):  # Si parmi les "a", le programme trouve "category" et "href" sans "books"
+            category = u.text.lower()  # Alors extraire le texte correspondant
+            # Vérifier que category a été trouvée, relève une AssertionError si category = None
+            category = category.replace("\n", "").replace(" ", "")
+            category_links.append(
+                base_url_for_categories
+                + "category/books/"
+                + category
+                + "_"
+                + str(index - 1)
+                + "/index.html"
+            )
+        index += 1
+    category_links.pop(0)
+    return category_links
+
+
 def scrape_book_urls(category_url):
     """Scrape toutes les urls des livres d'une page."""
     reponse = requests.get(category_url)

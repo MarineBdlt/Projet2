@@ -1,5 +1,4 @@
 import requests
-import time
 from bs4 import BeautifulSoup
 
 urlSite = "http://books.toscrape.com"
@@ -7,7 +6,8 @@ base_url_for_categories = "http://books.toscrape.com/catalogue/"
 
 
 def get_category_links(urlSite):
-    """Renvoie la liste des categories"""
+    """Return list of all categories"""
+
     reponse = requests.get(urlSite)
     soup = BeautifulSoup(reponse.text, "lxml")
     category_links = list()
@@ -20,33 +20,25 @@ def get_category_links(urlSite):
 
 
 def scrape_book_urls(category_url):
-    """Scrape toutes les urls des livres d'une page."""
+    """Scrap all books urls in a category"""
+
     reponse = requests.get(category_url)
     book_urls = []
     if reponse.ok:
 
-        soup = BeautifulSoup(reponse.text, "lxml")  # essentiel ?
+        soup = BeautifulSoup(reponse.text, "lxml")
         for h3 in soup.findAll("h3"):
             book_a = h3.find("a")
-
-            # assert book_a.text == book_a["title"]
             book_url = book_a["href"]
             full_book_url = base_url_for_categories + "/".join(book_url.split("/")[-2:])
             book_urls.append(full_book_url)
 
-    return book_urls  # return book_urls
-
-
-# ressources exemple
-
-nb = None
-category_url = (
-    "http://books.toscrape.com/catalogue/category/books/fantasy_19/index.html"
-)
+    return book_urls
 
 
 def get_all_urls_pages(category_url):
-    """Renvoie les urls des différentes pages d'une catégorie"""
+    """Return urls of pages in a category"""
+
     urls_pages = list()
     reponse = requests.get(category_url)
     soup = BeautifulSoup(reponse.text, "lxml")
@@ -63,7 +55,8 @@ def get_all_urls_pages(category_url):
 
 
 def all_urls_books_in_category(category_url):
-    """Liste toutes les urls des livres d'une catégorie."""
+    """Return all books urls in a category"""
+
     liste_urls_books = []
     urls_pages = get_all_urls_pages(category_url)
     for url in urls_pages:

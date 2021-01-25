@@ -1,14 +1,12 @@
-from scrap_infos_books import *
-from scraping_urls import *
+import scrap_infos_books
+import scraping_urls
+
 import requests
 import lxml
-import PIL
-from PIL import Image
+
 import urllib
 import urllib.request
 
-
-# Créer dossier avec nom de la catégorie
 from pathlib import Path
 from bs4 import BeautifulSoup
 
@@ -20,11 +18,10 @@ data_livre = get_book_info(urlBook)
 
 
 def save_book_data_to_csvfile(category_url):
-    """Enregistre les infos des livres d'une catégorie dans fichier excel"""
+    """Save the data of all books in a category in a csv file"""
+
     path = Path(".", "data")
     path.mkdir(exist_ok=True)
-
-    print(category_url)
 
     url_first_book = all_urls_books_in_category(category_url)[0]
 
@@ -42,6 +39,8 @@ def save_book_data_to_csvfile(category_url):
 
 
 def all_data(category_url):
+    """ Put in a list all data in a category """
+
     all_data = []
     for url in all_urls_books_in_category(category_url):
         all_data.append(get_book_info(url))
@@ -49,6 +48,8 @@ def all_data(category_url):
 
 
 def liste_tuples_images(all_data):
+    """ Create a tuples list (image, titre) for each book """
+
     liste = []
     for data_row in all_data:
 
@@ -57,18 +58,9 @@ def liste_tuples_images(all_data):
     return liste
 
 
-def scrap_images_in_category(category_url, urlSite):
-    reponse_category = requests.get(category_url)
-    soup3 = BeautifulSoup(reponse_category.text, "lxml")
-    list_images = []
-    for img in soup3.find_all("img"):
-        halflink = img["src"]
-        list_images.append(halflink.replace("../../../..", urlSite))
-    return list_images
-
-
 def save_images_to_file(category_url):
-    """sauve les images dans fichier"""
+    """ Save all books images from a category """
+
     all_data_var = all_data(category_url)
     liste_tuples = liste_tuples_images(all_data_var)
     path = Path(".", "data")
