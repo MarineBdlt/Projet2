@@ -53,17 +53,16 @@ def get_category(soup):
         ):  # Si parmi les "a", le programme trouve "category" et "href" sans "books"
             category = u.text  # Alors extraire le texte correspondant
             break  # Arrêter la boucle
-    assert (
-        category is not None
-    )  # Vérifier que category a été trouvée, relève une AssertionError si category = None
+    assert category is not None
     return category
 
 
 def get_description(soup2):
-    description = soup2.find(
-        "p", recursive=False
-    )  # Au sein de ce champ, il trouve le dernier "p"
-    return description.text
+    description = soup2.find("p", recursive=False)
+    text_description = "Description not available"
+    if description:
+        text_description = description.text
+    return text_description
 
 
 def get_image_url(soup2):
