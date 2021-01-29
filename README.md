@@ -1,7 +1,7 @@
 # OC_Projet2_BooktoScrape
 # Scraping d'une bibliothèque en ligne
 
-Le projet est un programme pour extraire les informations suivantes de la librairie en ligne * [BooksToScrape](https:books.toscrape.com/) :
+Le projet est un programme pour extraire les informations suivantes de la librairie en ligne [BooksToScrape](https:books.toscrape.com/) :
 
 product_page_url
 
@@ -31,13 +31,13 @@ Ces instructions permettent d'obtenir une copie du projet afin de le tester sur 
 
 ### Pré-requis
 
-Le programme étant écrit en Python, il est indispensable que celui-ci soit installé sur votre machine. Vous pouvez télécharger python :
+Le programme étant écrit en Python, il est indispensable que celui-ci soit installé sur votre machine. Vous pouvez télécharger Python :
 * [Télecharger Python](https://www.python.org/downloads/)  
 
 ### Installation
 
 Pour ne pas entrer en conflit avec d'autres projets déjà existants, il est préférable d'exécuter le programme sous un environnement virtuel.
-Voici le sprincipales commandes pour :
+Voici les principales commandes pour :
 
 1. Créer un environnement virtuel 
 
