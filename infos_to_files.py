@@ -1,4 +1,4 @@
-import scrap_infos_books
+import infos_books
 import scraping_urls
 
 import requests
