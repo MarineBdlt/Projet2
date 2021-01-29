@@ -1,26 +1,17 @@
 # OC_Projet2_BooktoScrape
 # Scraping d'une bibliothèque en ligne
 
-Le projet est un programme pour extraire les informations suivantes de la librairie en ligne : books.toscrape.com
+Le projet est un programme pour extraire les informations suivantes de la librairie en ligne * [BooksToScrape](https:books.toscrape.com/) :
 
 product_page_url
-
 universal_ product_code (upc)
-
 title
-
 price_including_tax
-
 price_excluding_tax
-
 number_available
-
 product_description
-
 category
-
 review_rating
-
 image_url
 
 Ces informations sont enregistrées dans un fichier CSV pour chaque catégorie de livres et les images de couvertures de tous les livres sont également enregistrées dans le dossier "Images".
@@ -32,7 +23,7 @@ Ces instructions permettent d'obtenir une copie du projet afin de le tester sur 
 ### Pré-requis
 
 Le programme étant écrit en Python, il est indispensable que celui-ci soit installé sur votre machine. Vous pouvez
-* [télecharger Python](https://www.python.org/downloads/) - 
+* [Télecharger Python](https://www.python.org/downloads/)  
 
 ### Installation
 
@@ -48,7 +39,7 @@ Voici le sprincipales commandes pour :
 ```python tutorial-env\Scripts\activate.bat```
 
 Pour plus de détails sur l'installation d'un environnement virtuel, se reporter à la documentation Python
-* [Documentation Python](https://docs.python.org/fr/3.6/tutorial/venv.html/) - 
+* [Documentation Python](https://docs.python.org/fr/3.6/tutorial/venv.html/)  
 
 Il est également nécessaire d'installer les bibliothèques indispensables au bon fonctionnement du programme. Celles-ci sont listées dans le document ```python requirement.txt``` et leur installation se fait via la commande suivante exécutée dans l'environnement virtuel que vous venez de créer:
 
