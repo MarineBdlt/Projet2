@@ -4,14 +4,23 @@
 Le projet est un programme pour extraire les informations suivantes de la librairie en ligne : books.toscrape.com
 
 product_page_url
+
 universal_ product_code (upc)
+
 title
+
 price_including_tax
+
 price_excluding_tax
+
 number_available
+
 product_description
+
 category
+
 review_rating
+
 image_url
 
 Ces informations sont enregistrées dans un fichier CSV pour chaque catégorie de livres et les images de couvertures de tous les livres sont également enregistrées dans le dossier "Images".
@@ -31,6 +40,7 @@ Pour ne pas entrer en conflit avec d'autres projets déjà existants, il est pr�
 Voici le sprincipales commandes pour :
 
 1. Créer un environnement virtuel 
+
 ```python python3 -m venv tutorial-env```
 
 2. Activer l'environnement virtuel
