@@ -4,14 +4,23 @@
 Le projet est un programme pour extraire les informations suivantes de la librairie en ligne * [BooksToScrape](https:books.toscrape.com/) :
 
 product_page_url
+
 universal_ product_code (upc)
+
 title
+
 price_including_tax
+
 price_excluding_tax
+
 number_available
+
 product_description
+
 category
+
 review_rating
+
 image_url
 
 Ces informations sont enregistrées dans un fichier CSV pour chaque catégorie de livres et les images de couvertures de tous les livres sont également enregistrées dans le dossier "Images".
@@ -22,7 +31,7 @@ Ces instructions permettent d'obtenir une copie du projet afin de le tester sur 
 
 ### Pré-requis
 
-Le programme étant écrit en Python, il est indispensable que celui-ci soit installé sur votre machine. Vous pouvez
+Le programme étant écrit en Python, il est indispensable que celui-ci soit installé sur votre machine. Vous pouvez télécharger python :
 * [Télecharger Python](https://www.python.org/downloads/)  
 
 ### Installation
@@ -32,26 +41,26 @@ Voici le sprincipales commandes pour :
 
 1. Créer un environnement virtuel 
 
-```python python3 -m venv tutorial-env```
+```python3 -m venv tutorial-env```
 
 2. Activer l'environnement virtuel
 
-```python tutorial-env\Scripts\activate.bat```
+```tutorial-env\Scripts\activate.bat```
 
 Pour plus de détails sur l'installation d'un environnement virtuel, se reporter à la documentation Python
 * [Documentation Python](https://docs.python.org/fr/3.6/tutorial/venv.html/)  
 
 Il est également nécessaire d'installer les bibliothèques indispensables au bon fonctionnement du programme. Celles-ci sont listées dans le document ```python requirement.txt``` et leur installation se fait via la commande suivante exécutée dans l'environnement virtuel que vous venez de créer:
 
-```python pip install -r requirements.txt```
+```pip install -r requirements.txt```
 
 ## Démarrage
 
 Une fois la console placée dans le dossier du programme, il suffit d'exécuter la commande suivante dans l'environnement virtuel:
 
-```python python3 main.py```
+```python3 main.py```
 
-Des dossiers ```python CSV``` et ```python Images``` vont se créer. Ils contiendront respectivement les fichiers CSV de chaque catégorie de livre ainsi que toutes les images de couverture. Vous pourrez suivre l'évolution du programme grâce à l'affichage de la catégorie en cours d'extraction sur la console.
+Des fichiers ```CSV``` et des dossiers ```Images``` vont se créer pour chaque catégorie de libre. Ils contiendront respectivement les fichiers CSV de tous les livres d'une catégories ainsi que toutes les images de couverture. Vous pourrez suivre l'évolution du programme grâce à l'affichage de la catégorie en cours d'extraction sur la console.
 
 ## Fabriqué avec
 [VisualStudioCode](https://code.visualstudio.com/) - Editeur de textes
