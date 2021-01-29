@@ -1,8 +1,5 @@
 # OC_Projet2_BooktoScrape
 # Scraping d'une bibliothèque en ligne
-_(juste en dessous des badges sympatiques à placer)_
-
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
 
 Le projet est un programme pour extraire les informations suivantes de la librairie en ligne : books.toscrape.com
 
@@ -25,8 +22,8 @@ Ces instructions permettent d'obtenir une copie du projet afin de le tester sur 
 
 ### Pré-requis
 
-Le programme étant écrit en Python, il est indispensable que celui-ci soit installé sur votre machine. Vous pouvez télécharger Python ici
-* [ici](https://www.python.org/downloads/) - 
+Le programme étant écrit en Python, il est indispensable que celui-ci soit installé sur votre machine. Vous pouvez
+* [télecharger Python](https://www.python.org/downloads/) - 
 
 ### Installation
 
@@ -55,9 +52,7 @@ Une fois la console placée dans le dossier du programme, il suffit d'exécuter 
 
 Des dossiers ```python CSV``` et ```python Images``` vont se créer. Ils contiendront respectivement les fichiers CSV de chaque catégorie de livre ainsi que toutes les images de couverture. Vous pourrez suivre l'évolution du programme grâce à l'affichage de la catégorie en cours d'extraction sur la console.
 
-## Fabriqué avec
-
-* [VisualStudioCode](https://code.visualstudio.com/) - Editeur de textes
+## [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)] [VisualStudioCode](https://code.visualstudio.com/) - Editeur de textes
 
 
 ## Auteurs
