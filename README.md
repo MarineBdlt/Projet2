@@ -25,7 +25,8 @@ Ces instructions permettent d'obtenir une copie du projet afin de le tester sur 
 
 ### Pré-requis
 
-Le programme étant écrit en Python, il est indispensable que celui-ci soit installé sur votre machine. Vous pouvez télécharger Python ici : https://www.python.org/downloads/
+Le programme étant écrit en Python, il est indispensable que celui-ci soit installé sur votre machine. Vous pouvez télécharger Python ici
+* [ici](https://www.python.org/downloads/) - 
 
 ### Installation
 
@@ -40,7 +41,7 @@ Voici le sprincipales commandes pour :
 ```python tutorial-env\Scripts\activate.bat```
 
 Pour plus de détails sur l'installation d'un environnement virtuel, se reporter à la documentation Python
-https://docs.python.org/fr/3.6/tutorial/venv.html
+* [Documentation Python](https://docs.python.org/fr/3.6/tutorial/venv.html/) - 
 
 Il est également nécessaire d'installer les bibliothèques indispensables au bon fonctionnement du programme. Celles-ci sont listées dans le document ```python requirement.txt``` et leur installation se fait via la commande suivante exécutée dans l'environnement virtuel que vous venez de créer:
 
@@ -58,13 +59,6 @@ Des dossiers ```python CSV``` et ```python Images``` vont se créer. Ils contien
 
 * [VisualStudioCode](https://code.visualstudio.com/) - Editeur de textes
 
-## Versions
-Listez les versions ici 
-_exemple :_
-**Dernière version stable :** 5.0
-**Dernière version :** 5.1
-Liste des versions : [Cliquer pour afficher](https://github.com/your/project-name/tags)
-_(pour le lien mettez simplement l'URL de votre projets suivi de ``/tags``)_
 
 ## Auteurs
 Listez le(s) auteur(s) du projet ici !
@@ -75,6 +69,5 @@ Listez le(s) auteur(s) du projet ici !
 
 Merci à **Ranga Gonnage** pour son enseignement et son soutien.
 
-Ce projet est sous licence ``exemple: WTFTPL`` - voir le fichier [LICENSE.md](LICENSE.md) pour plus d'informations
 
 
