@@ -52,7 +52,8 @@ Une fois la console placée dans le dossier du programme, il suffit d'exécuter 
 
 Des dossiers ```python CSV``` et ```python Images``` vont se créer. Ils contiendront respectivement les fichiers CSV de chaque catégorie de livre ainsi que toutes les images de couverture. Vous pourrez suivre l'évolution du programme grâce à l'affichage de la catégorie en cours d'extraction sur la console.
 
-## [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)] [VisualStudioCode](https://code.visualstudio.com/) - Editeur de textes
+## [forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)
+[VisualStudioCode](https://code.visualstudio.com/) - Editeur de textes
 
 
 ## Auteurs
