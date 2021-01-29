@@ -23,7 +23,7 @@ review_rating
 
 image_url
 
-Ces informations sont enregistrées dans un fichier CSV pour chaque catégorie de livres et les images de couvertures de tous les livres sont également enregistrées dans le dossier "Images".
+Ces informations sont enregistrées dans un fichier CSV et dans un dossier Images pour chaque catégorie de livres.
 
 ## Pour commencer
 
@@ -50,7 +50,7 @@ Voici les principales commandes pour :
 Pour plus de détails sur l'installation d'un environnement virtuel, se reporter à la documentation Python
 * [Documentation Python](https://docs.python.org/fr/3.6/tutorial/venv.html/)  
 
-Il est également nécessaire d'installer les bibliothèques indispensables au bon fonctionnement du programme. Celles-ci sont listées dans le document ```python requirement.txt``` et leur installation se fait via la commande suivante exécutée dans l'environnement virtuel que vous venez de créer:
+Il est également nécessaire d'installer les bibliothèques indispensables au bon fonctionnement du programme. Celles-ci sont listées dans le document ```requirement.txt``` et leur installation se fait via la commande suivante exécutée dans l'environnement virtuel que vous venez de créer:
 
 ```pip install -r requirements.txt```
 
