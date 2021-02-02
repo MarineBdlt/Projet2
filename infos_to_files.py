@@ -8,6 +8,7 @@ from tqdm import tqdm
 
 import urllib
 import urllib.request
+import csv
 
 from pathlib import Path
 from bs4 import BeautifulSoup
