@@ -3,6 +3,8 @@ import scraping_urls
 
 import requests
 import lxml
+import csv
+from tqdm import tqdm
 
 import urllib
 import urllib.request
@@ -14,8 +16,6 @@ from bs4 import BeautifulSoup
 urlSite = "http://books.toscrape.com"
 base_url_for_categories = "http://books.toscrape.com/catalogue/"
 
-data_livre = get_book_info(urlBook)
-
 
 def save_book_data_to_csvfile(category_url):
     """Save the data of all books in a category in a csv file"""
@@ -23,9 +23,9 @@ def save_book_data_to_csvfile(category_url):
     path = Path(".", "data")
     path.mkdir(exist_ok=True)
 
-    url_first_book = all_urls_books_in_category(category_url)[0]
+    url_first_book = scraping_urls.all_urls_books_in_category(category_url)[0]
 
-    first_book = get_book_info(url_first_book)
+    first_book = infos_books.get_book_info(url_first_book)
     category_name = first_book["category"]
     category_path = Path(path, category_name)
     category_path.mkdir(exist_ok=True)
@@ -33,8 +33,8 @@ def save_book_data_to_csvfile(category_url):
     with filepath.open("w", encoding="utf-8-sig") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=first_book.keys(), dialect="excel")
         writer.writeheader()
-        for url in all_urls_books_in_category(category_url):
-            all_data = get_book_info(url)
+        for url in scraping_urls.all_urls_books_in_category(category_url):
+            all_data = infos_books.get_book_info(url)
             writer.writerow(all_data)
 
 
@@ -42,8 +42,8 @@ def all_data(category_url):
     """ Put in a list all data in a category """
 
     all_data = []
-    for url in all_urls_books_in_category(category_url):
-        all_data.append(get_book_info(url))
+    for url in scraping_urls.all_urls_books_in_category(category_url):
+        all_data.append(infos_books.get_book_info(url))
     return all_data
 
 
@@ -65,8 +65,8 @@ def save_images_to_file(category_url):
     liste_tuples = liste_tuples_images(all_data_var)
     path = Path(".", "data")
     path.mkdir(exist_ok=True)
-    url_first_book = all_urls_books_in_category(category_url)[0]
-    first_book = get_book_info(url_first_book)
+    url_first_book = scraping_urls.all_urls_books_in_category(category_url)[0]
+    first_book = infos_books.get_book_info(url_first_book)
     category_name = first_book["category"]
     category_path = Path(path, category_name)
     category_path.mkdir(exist_ok=True)
