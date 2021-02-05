@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 urlSite = "http://books.toscrape.com"
 base_url_for_categories = "http://books.toscrape.com/catalogue/"
-urlBook = "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
+urlBook = "https://books.toscrape.com/catalogue/alice-in-wonderland-alices-adventures-in-wonderland-1_5/index.html"
 
 reponse = requests.get(urlBook)
 soup = BeautifulSoup(reponse.text, "lxml")
@@ -45,8 +45,11 @@ def get_category(soup):
 
 
 def get_description(soup2):
-    description = soup2.find("p", recursive=False)
-    return description.text
+    try:
+        description = soup2.find("p", recursive=False)
+        return description.text
+    except AttributeError:
+        return str("Il n'y a pas de description.")
 
 
 def get_image_url(soup2):
