@@ -62,7 +62,7 @@ Une fois la console placée dans le dossier du programme, il suffit d'exécuter 
 
 Des fichiers ```CSV``` et des dossiers ```Images``` vont se créer pour chaque catégorie de livres. Ils contiendront respectivement les fichiers CSV de tous les livres d'une catégorie ainsi que toutes les images de couverture relative à ces mêmes livres. 
 
-Vous pourrez suivre l'évolution du programme grâce à l'affichage de la catégorie en cours d'extraction sur la console.
+Vous pourrez suivre l'évolution du programme grâce au pourcentage en cours d'extraction sur la console.
 
 ## Fabriqué avec
 [VisualStudioCode](https://code.visualstudio.com/) - Editeur de textes
